@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .animate-gradient-xy {
+      background-size: 400% 400%;
+      animation: gradient-xy 15s ease infinite;
+    }
+  }
+
+  @keyframes scroll-left-to-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes scroll-right-to-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll-left-to-right {
+    animation: scroll-left-to-right 20s linear infinite;
+  }
+  
+  .animate-scroll-right-to-left {
+    animation: scroll-right-to-left 20s linear infinite;
+  }
+  
+  

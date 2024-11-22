@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientBg {
+  0% {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+  }
+  50% {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+  }
+  100% {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+  }
+}
+
+/* Define the pop-up animation */
+@keyframes pop-up {
+  0% {
+    transform: scale(0.8); /* Start smaller */
+    opacity: 0; /* Start invisible */
+  }
+  50% {
+    transform: scale(1.1); /* Scale up a bit (pop effect) */
+    opacity: 1; /* Fade in */
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply the pop-up effect when 'animate-pop' is active */
+.animate-pop {
+  animation: pop-up 0.8s ease-out forwards;
+}
+
+/* Pop-up and down animation */
+@keyframes pop-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back to original position */
+  }
+}
+
+.pop-up-down-animation {
+  animation: pop-up-down 1s ease-in-out infinite; /* Repeat infinitely with smooth easing */
+}
+
